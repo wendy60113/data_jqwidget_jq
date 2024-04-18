@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<title>jQuery Calendar Sample</title>
+<link rel="stylesheet" href="/js/jqwidgets/styles/jqx.base.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="/js/jqwidgets/jqxdatetimeinput.js"></script>
+<script type="text/javascript" src="/js/jqwidgets/jqxcalendar.js"></script>
+<script type="text/javascript" src="/js/jqwidgets/globalization/globalize.js"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FX5PV9DNT"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-2FX5PV9DNT');</script></head>
+ <body>
+<div id='content'>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $("#jqxcalendar").jqxCalendar({ width: '250px', height: '250px' });
+          $('#jqxcalendar').bind('valuechanged', function (event) {
+              var date = event.args.date;
+              $("#log").text(date.toDateString());
+          });
+      });
+  </script>  
+  <div id='jqxcalendar'></div>
+  <div id='log'></div>
+</div>
+</body>
+</html>
